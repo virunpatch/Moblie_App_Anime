@@ -9,14 +9,23 @@
   </ion-toolbar>
 </ion-header>
 
+  <ion-item *ngFor="let i of Coms">
+    <ion-card>{{i.com}}</ion-card>
+    <ion-card><img src="{{i.icon}}"></ion-card>
+  </ion-item>
+
+
+
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">Your Comment</ion-label>
         <section>
           <ion-textarea></ion-textarea>
-          <ion-button size="small" slot="end">Sent</ion-button>
+          <ion-button size="small" slot="end" >
+            <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>Sent</ion-button>
+          <ion-button size="small" slot="end">
+            <ion-icon slot="icon-only" name="duplicate-outline"></ion-icon>Pic</ion-button>
         </section>
-
       </ion-item>
     </ion-card-content>
 
