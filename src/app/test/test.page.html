@@ -13,19 +13,19 @@
 <ion-content>
   <ion-card *ngFor="let i of tmpobj">
     <ion-card-header>
-      <img src="{{i.img}}">
+      <img src="{{i.img}}" [routerLink]="['/comment']">
       <ion-card-subtitle>
         <label>{{i.rating}}</label>
         <br>
         <label>{{i.genre}}</label>
       </ion-card-subtitle>
       <!--ion-card-subtitle>{{i.genre}}</-ion-card-subtitle-->
-      <ion-card-title>{{i.name}}</ion-card-title>
+      <ion-card-title >{{i.name}}</ion-card-title>
     </ion-card-header>
-
     <ion-card-content>
       {{i.detail}}
     </ion-card-content>
   </ion-card>
+
 
 </ion-content>
