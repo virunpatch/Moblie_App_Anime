@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Home
+      Reviews
     </ion-title>
     <ion-button slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
@@ -11,17 +11,20 @@
 
 
 <ion-content>
-  <ion-card *ngFor="let i of ListMov">
+  <ion-card *ngFor="let i of tmpobj">
     <ion-card-header>
-      <img src="{{i.img}}" [routerLink]="['/test',i]" >
-      <!--ion-card-subtitle>{{i.pop}}</!--ion-card-subtitle>
-      <ion-card-subtitle>{{i.re}}</ion-card-subtitle -->
-      <p>
-      <ion-card-subtitle>{{i.name}}</ion-card-subtitle >
+      <img src="{{i.img}}">
+      <ion-card-subtitle>
+        <label>{{i.rating}}</label>
+        <br>
+        <label>{{i.genre}}</label>
+      </ion-card-subtitle>
+      <!--ion-card-subtitle>{{i.genre}}</-ion-card-subtitle-->
+      <ion-card-title>{{i.name}}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <!--{{i.cap}}-->
+      {{i.detail}}
     </ion-card-content>
   </ion-card>
 
