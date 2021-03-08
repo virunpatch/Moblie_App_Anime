@@ -3,16 +3,40 @@
     <ion-title>
       Admin
     </ion-title>
-    <ion-button slot="start">
-      <ion-menu-button menu="main-menu">
-        <p>
-          <ion-item>
-            <ion-avatar slot="start">
-              <img src="https://i.pinimg.com/564x/69/f4/ff/69f4ff2f8b79570b0018914ec5734ccd.jpg">
-            </ion-avatar>
-            <ion-label>User: Childe</ion-label>
-          </ion-item> <p>
-      </ion-menu-button>
-    </ion-button>
+      <ion-button slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-button>
   </ion-toolbar>
 </ion-header>
+
+<!--ion-app>
+  <ion-menu menuId="main-menu" content-id="main"></ion-menu>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://i.pinimg.com/564x/f7/87/a7/f787a7f3158be5591ecc6e8224fb6866.jpg">
+        </ion-avatar>
+          <ion-label>Admin Zhongli</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-app -->
+
+
+<ion-content>
+  <ion-card *ngFor="let i of ListMov">
+    <ion-card-header>
+      <img src="{{i.img}}" [routerLink]="['/test',i]" >
+      <!--ion-card-subtitle>{{i.pop}}</!--ion-card-subtitle>
+      <ion-card-subtitle>{{i.re}}</ion-card-subtitle -->
+      <p>
+      <ion-card-subtitle>{{i.name}}</ion-card-subtitle >
+    </ion-card-header>
+
+    <ion-card-content>
+      <!--{{i.cap}}-->
+    </ion-card-content>
+  </ion-card>
+
+</ion-content >

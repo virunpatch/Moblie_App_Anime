@@ -11,9 +11,8 @@
 </ion-header>
 
 
-
-
 <ion-content>
+  <ion-searchbar showCancelButton="always"> </ion-searchbar>
   <ion-card *ngFor="let i of ListMov">
     <ion-card-header>
       <img src="{{i.img}}" [routerLink]="['/test',i]" >
