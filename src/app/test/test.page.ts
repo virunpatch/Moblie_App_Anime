@@ -22,7 +22,7 @@ export class TestPage implements OnInit {
     this.getcrud.readData().subscribe(data => {
     this.tmpobj = data.map(e => {
     return {
-      id: e.payload.doc.id,
+      id: e.payload.doc["id"],
       isEdit: false,
       name: e.payload.doc.data()['name'.toString()],
       genre: e.payload.doc.data()['genre'.toString()],

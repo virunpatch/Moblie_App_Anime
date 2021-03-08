@@ -12,6 +12,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 //import { environment } from '../enviroments/enviroment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+//import { AngularFireAuthModule } from '@angular/fire/auth';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 
 @NgModule({
@@ -26,7 +29,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AngularFirestoreModule,
     AngularFireDatabaseModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [ StatusBar, SplashScreen, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
