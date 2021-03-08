@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'comment',
     loadChildren: () => import('./comment/comment.module').then( m => m.CommentPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
 ];
 
 @NgModule({
